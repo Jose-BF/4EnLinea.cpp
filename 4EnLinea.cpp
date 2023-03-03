@@ -69,16 +69,16 @@ void ingresarFichaO(char tablero[6][7]){
     int columna;
     inicioFichaO:
     cout<<"Ingrese la columna donde desea colocar su ficha: ";
-    if (!(cin >> columna)) { // Validar si el valor ingresado no es un número
+    if (!(cin >> columna)) {
         cout << "Debe ingresar un numero entero." << endl;
-        cin.clear(); // Limpiar la bandera de error del cin
-        cin.ignore(10000, '\n'); // Ignorar los caracteres no válidos ingresados por el usuario
-        goto inicioFichaO; // Saltar al inicio del ciclo
+        cin.clear();
+        cin.ignore(10000, '\n');
+        goto inicioFichaO;
     }
 
-    if (columna < 0 || columna > 6) { // Validar si el valor ingresado está dentro del rango permitido
+    if (columna < 0 || columna > 6) {
         cout << "Debe ingresar un numero entre 0 y 6." << endl;
-        goto inicioFichaO; // Saltar al inicio del ciclo
+        goto inicioFichaO;
     }
 
     for(int i=5;i>=0;i--){
